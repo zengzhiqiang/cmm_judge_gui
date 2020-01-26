@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>主程序</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="start_menu">
+    <property name="title">
+     <string>开始</string>
+    </property>
+    <addaction name="cmm_judge_action"/>
+    <addaction name="calculate_slog_action"/>
+    <addaction name="calculate_slog_k_action"/>
+   </widget>
+   <addaction name="start_menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="cmm_judge_action">
+   <property name="text">
+    <string>三坐标检查</string>
+   </property>
+  </action>
+  <action name="calculate_slog_action">
+   <property name="text">
+    <string>计算Slog</string>
+   </property>
+  </action>
+  <action name="calculate_slog_k_action">
+   <property name="text">
+    <string>计算Slog和K值</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cmm_judge_action</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_cmm_judge_window()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>18</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>101</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calculate_slog_action</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_calculate_slog_window()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>21</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>36</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calculate_slog_k_action</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_calculate_slog_k_window()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>374</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>405</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>open_cmm_judge_window()</slot>
+  <slot>open_calculate_slog_window()</slot>
+  <slot>open_calculate_slog_k_window()</slot>
+ </slots>
+</ui>
